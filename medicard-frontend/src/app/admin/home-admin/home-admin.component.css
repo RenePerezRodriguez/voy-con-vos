@@ -1,0 +1,9 @@
+#bienvenida{
+    font-size: 50px;
+}
+li{
+    cursor: pointer;
+}
+li:hover{
+    opacity: 0.5;
+}

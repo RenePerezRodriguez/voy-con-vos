@@ -1,0 +1,26 @@
+<div align="center" class="mt-1 pb-1">
+            <div class="logo">
+                <img class="image" src="../../../assets/img/MEDICARD.png" alt="imagen">
+            </div>
+            <form class="mt-4" [formGroup]="miFormulario">
+                <div class="inputs">
+                    <span class="p-float-label">
+                        <input id="float-input" type="text" formControlName="correo" pInputText> 
+                        <label for="float-input">Email/Telefono</label>
+                    </span>
+                </div>
+               <div class="inputs">
+                <span class="p-float-label mt-4">
+                    <input id="float-input" type="password" formControlName="password" pInputText> 
+                    <label for="float-input">Contraseña</label>
+                </span>
+               </div>
+            </form>
+            <button pButton pRipple type="button" label="Iniciar sesion" 
+            (click)="login()"
+            class="p-button-rounded p-button-sm p-button-outlined mt-4 w-100"></button>
+            <div class="mt-5">
+                <p>Aun no tienes una cuenta?</p>
+                <a routerLink="/auth/register"><p>Crear cuenta</p></a>
+        </div>
+</div>

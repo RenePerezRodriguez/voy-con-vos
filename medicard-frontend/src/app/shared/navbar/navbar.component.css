@@ -1,0 +1,26 @@
+li{
+  border-radius: 5px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.d-flex{
+  width: 15%;
+  margin: auto;
+}
+a{
+  color: black;
+}
+li:hover{
+  background-color: #43BAC1;
+  
+}
+a:hover{
+  color: white;
+}
+.active{
+  background-color: #E62D28;
+  color: white;
+  border-radius: 5px;
+
+}

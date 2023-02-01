@@ -1,0 +1,16 @@
+#float-input{
+    width: 100%;
+}
+.inputs{
+    width: 90%;
+    margin: auto;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: #43BAC1;
+}
+.col-4{
+    width: 45%;
+}

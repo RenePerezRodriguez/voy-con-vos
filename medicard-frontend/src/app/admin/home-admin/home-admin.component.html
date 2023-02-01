@@ -1,0 +1,75 @@
+<div class="p-5">
+
+    <div class="row">
+        <div class="col-6">
+            <img src="../../../assets/img/MEDICARD.png" alt="medicardlogo">
+            <div>
+                <h1>Datos personales</h1>
+                <form [formGroup]="miFormulario" class="p-2">
+                    <div>
+                        <h3>Nombre completo</h3>
+                        <span class="p-float-label">
+                            <input id="float-input" class="w-100" formControlName="nombre" type="text" pInputText> 
+                        </span>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <h3>Correo</h3>
+                            <span class="p-float-label">
+                                <input id="float-input" formControlName="correo" type="text" pInputText> 
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <h3>Celular</h3>
+                            <span class="p-float-label">
+                                <input id="float-input" formControlName="celular" type="text" pInputText> 
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <h3>Descripcion</h3>
+                            <span class="p-float-label">
+                                <input id="float-input" formControlName="descripcion" type="text" pInputText> 
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <h3>Especialidades</h3>
+                            <span class="p-float-label">
+                                <input id="float-input" formControlName="especialidades" type="text" pInputText> 
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <div align="center">
+                    <button pButton class="editar w-25 mt-4" label="Editar datos"></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <p id="bienvenida">Bienvenido Doctor Test 01 al sistema adminsitrativo</p>
+            <hr>
+            <div>
+                <h2>Pacientes del dia</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4>Paciente: <span>Yurguen Enrique Pariente Ulloa</span></h4>
+                        <p>Descripcion: <span>Dolor de estomago con dolor de cabeza</span></p>
+                    </li>
+                    <li class="list-group-item mt-1">
+                        <h4>Paciente: Cedrick Sergio Pariente Ulloa</h4>
+                        <p>Descripcion: Dolor en los huesos y fiebre</p>
+                    </li>
+                    <li class="list-group-item mt-1">
+                        <h4>Paciente: Juan Perez del Castillo</h4>
+                        <p>Descripcion: Dolor de espalda y del cuello</p>
+                    </li>
+                    <li class="list-group-item mt-1">
+                        <h4>Paciente: Andrea Zeballos Ojeda</h4>
+                        <p>Descripcion: Infeccion por comer muchos dulces</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

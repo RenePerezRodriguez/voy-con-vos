@@ -1,0 +1,11 @@
+.card{
+        align-items: center;
+        height: 668px;
+        background-color: #43BAC1;
+        padding: 0px;
+}
+.con{
+    width: 450px;
+    margin-top: 20px;
+    box-shadow: 5px 5px 40px; 
+}

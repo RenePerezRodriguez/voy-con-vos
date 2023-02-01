@@ -1,0 +1,21 @@
+.container{
+    width: 32%;
+    margin: auto;
+    padding: 60px;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: #43BAC1;
+}
+.image{
+    width: 50%;
+}
+#float-input{
+    width: 100%;
+}
+.inputs{
+    width: 80%;
+    margin: auto;
+}

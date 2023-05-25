@@ -1,0 +1,182 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(112, 0, 0, 0.5); /* Fondo semi-transparente */
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: white;
+    
+  }
+  
+  .overlay h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .overlay p {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  
+  .credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    font-size: 8px;
+  }
+  
+  .img-logo-home {
+    width: 10em;
+    height: 10em;
+    margin-right: 1em;
+  }
+
+  /* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .overlay h1 {
+    font-size: 2.5em; /* Reducimos el tamaño de fuente */
+    margin-bottom: 0.3em; /* Reducimos el margen inferior */
+  }
+
+  .overlay p {
+    font-size: 1em; /* Reducimos el tamaño de fuente */
+    margin: 0.3em 0; /* Reducimos los márgenes superior e inferior */
+  }
+
+  .credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em; /* Reducimos el margen superior */
+    font-size: 6px; /* Reducimos el tamaño de fuente */
+  }
+
+  .img-logo-home {
+    width: 6em; /* Reducimos el ancho de la imagen */
+    height: 6em; /* Reducimos la altura de la imagen */
+    margin-right: 0.5em; /* Reducimos el margen derecho */
+  }
+}
+
+
+
+  .container-lista {
+    background-color: #660000;
+    color: #fff;
+    padding: 50px 0;
+    margin: 0;
+  }
+  
+  .container-lista h2 {
+    color: #fff;
+  }
+  
+  .container-lista li {
+    color: #fff;
+  }
+  
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .container-lista {
+    padding: 30px 0; /* Reducimos el padding superior e inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-lista h2 {
+    font-size: 24px; /* Reducimos el tamaño de fuente */
+  }
+
+  .container-lista li {
+    font-size: 18px; /* Reducimos el tamaño de fuente */
+  }
+
+  h2 {
+    font-size: 24px; /* Reducimos el tamaño de fuente */
+    margin-bottom: 15px; /* Reducimos el margen inferior */
+  }
+}
+
+
+
+  
+  img {
+    max-width: 100%;
+  }
+
+  .container-info {
+    margin-left: 200px;
+    margin-bottom: 50px;
+  }
+  .container-info h2 {
+    font-size: 30px;
+    border-left: 5px solid red;
+    padding-left: 10px;
+  }
+  .container-info h3 {
+    font-size: 20px;
+    border-left: 5px solid red;
+    padding-left: 10px;
+  }
+  
+  .p-vision-mision {
+    font-size: 14px;
+  }
+  /* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  img {
+    max-width: 100%; /* Hacemos que las imágenes se ajusten al ancho del contenedor */
+  }
+
+  .container-info {
+    margin-left: 0; /* Eliminamos el margen izquierdo */
+    margin-bottom: 30px; /* Reducimos el margen inferior */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container-info h2 {
+    font-size: 24px; /* Reducimos el tamaño de fuente */
+    
+  }
+
+  .container-info h3 {
+    font-size: 18px; /* Reducimos el tamaño de fuente */
+  
+  }
+
+  .p-vision-mision {
+    font-size: 12px; /* Reducimos el tamaño de fuente */
+  }
+}
+
+  

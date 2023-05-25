@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top text-white custom-bg" id="navbar">  
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">Voy con Vos</a>
+      <button class="navbar-toggler order-first navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse flex-row-reverse ms-auto me-3" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/beneficios"><i class="bi bi-gift"></i> Beneficios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="openModal(modalTrabajaConNosotros)">Trabaja Con Nosotros</a>          
+          
+            <ng-template #modalTrabajaConNosotros >               
+                  <div class="modal-header">
+                <h4 class="modal-title">
+                  ¿Cómo podemos trabajar juntos?
+                </h4>
+                <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Las empresas de transporte interdepartamental pueden trabajar con una empresa de servicios de asistencia médica al viajero de la siguiente manera:</p>
+                <ul>
+                  <li>Ofrecer el servicio: Las empresas de transporte pueden ofrecer el servicio de asistencia médica al viajero de Voy Con Vos a sus pasajeros al momento de la compra del boleto de transporte. Así, el pasajero puede adquirir el servicio de cobertura médica por una tarifa asequible de 5 o 10 bolivianos.</li>
+                  <li>Convenios con clínicas privadas: Las empresas de transporte pueden establecer convenios con las clínicas privadas de la zona donde ofrecen el servicio de transporte, para que los pasajeros que adquieran el servicio de asistencia médica al viajero de Voy Con Vos puedan recibir atención médica de calidad en caso de emergencia.</li>
+                  <li>Información y promoción: Las empresas de transporte pueden informar a sus pasajeros sobre la existencia del servicio de asistencia médica al viajero de Voy Con Vos y promocionarlo como un valor agregado al servicio de transporte.</li>
+                  <li>Capacitación al personal: Las empresas de transporte pueden capacitar a su personal para que esté preparado para asistir a los pasajeros en caso de emergencia y pueda brindar información sobre el servicio de asistencia médica al viajero de Voy Con Vos.</li>
+                  <li>Evaluación y mejora continua: Las empresas de transporte pueden evaluar constantemente la calidad del servicio de asistencia médica al viajero de Voy Con Vos y trabajar en conjunto con la empresa para mejorar la atención y satisfacción de los pasajeros.</li>
+                </ul>
+                <p>En conclusión, la colaboración entre empresas de transporte interdepartamental y una empresa de servicios de asistencia médica al viajero puede ser beneficiosa para ambas partes, ya que ofrece un valor agregado al servicio de transporte y garantiza la tranquilidad y seguridad de los pasajeros durante sus viajes.</p>
+              </div>
+        </ng-template>
+            
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/voyconvosBO"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-youtube"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login"><i class="bi bi-person"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

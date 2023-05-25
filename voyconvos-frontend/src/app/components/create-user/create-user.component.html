@@ -1,0 +1,109 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <span class="titulo">{{ titulo | uppercase }}</span>
+            <form class="mt-3" [formGroup]="userForm" (ngSubmit)="addUser()">
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-lg" formControlName="ci"
+                  placeholder="Cedula de Identidad">
+                <div class="text-danger"
+                  *ngIf="userForm.get('ci')?.hasError('required') && userForm.get('ci')?.touched">
+                  <span>El número de C.I. <strong>es obligatorio</strong></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-lg" formControlName="nombres" placeholder="Nombres">
+                <div class="text-danger"
+                  *ngIf="userForm.get('nombres')?.hasError('required') && userForm.get('nombres')?.touched">
+                  <span>El nombre <strong>es obligatorio</strong></span>
+                </div>
+                <div class="text-danger"
+                  *ngIf="userForm.get('nombres')?.hasError('pattern') && userForm.get('nombres')?.dirty">
+                  <span>Ingresa solo letras en el campo de nombres</span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-lg" formControlName="apellidos" placeholder="Apellidos">
+                <div class="text-danger"
+                  *ngIf="userForm.get('apellidos')?.hasError('required') && userForm.get('apellidos')?.touched">
+                  <span>Los apellidos <strong>son obligatorios</strong></span>
+                </div>
+                <div class="text-danger"
+                  *ngIf="userForm.get('apellidos')?.hasError('pattern') && userForm.get('apellidos')?.dirty">
+                  <span>Ingresa solo letras en el campo de apellidos</span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="date" class="form-control form-control-lg" formControlName="fecha_nacimiento"
+                  placeholder="Fecha de Nacimiento">
+                <div class="text-danger"
+                  *ngIf="userForm.get('fecha_nacimiento')?.hasError('required') && userForm.get('fecha_nacimiento')?.touched">
+                  <span>La fecha de nacimiento <strong>es obligatoria</strong></span>
+                </div>
+                <div class="text-danger"
+                  *ngIf="userForm.get('fecha_nacimiento')?.hasError('fechaInvalida') && userForm.get('fecha_nacimiento')?.dirty">
+                  <span>La fecha de nacimiento no puede ser mayor a la fecha actual</span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <select class="form-control form-control-lg" formControlName="sexo" placeholder="Sexo">
+                  <option value="" disabled selected>Seleccione una opción</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+                  <option value="O">Otro</option>
+                </select>
+                <div class="text-danger"
+                  *ngIf="userForm.get('sexo')?.hasError('required') && userForm.get('sexo')?.touched">
+                  <span>El género <strong>es obligatorio</strong></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <input id="telefono" type="number" class="form-control form-control-lg" formControlName="telefono" placeholder="Telefono"
+                  (input)="filtrarNumeros($event)" [(ngModel)]="telefono">
+                <div class="text-danger"
+                  *ngIf="userForm.get('telefono')?.hasError('required') && userForm.get('telefono')?.touched">
+                  <span>El número de telefono <strong>es obligatorio</strong></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <select class="form-control form-control-lg" formControlName="ciudad_destino" placeholder="Ciudad Destino">
+                  <option value="" disabled selected>Seleccione su Ciudad de Destino</option>
+                  <option value="La Paz">La Paz</option>
+                  <option value="Oruro">Oruro</option>
+                  <option value="Potosí">Potosí</option>
+                  <option value="Chuquisaca">Chuquisaca</option>
+                  <option value="Cochabamba">Cochabamba</option>
+                  <option value="Tarija ">Tarija</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                  <option value="Beni">Beni</option>
+                  <option value="Pando">Pando</option>
+                </select>
+                <div class="text-danger"
+                  *ngIf="userForm.get('ciudad_destino')?.hasError('required') && userForm.get('ciudad_destino')?.touched">
+                  <span>La ciudad de destino <strong>es obligatoria</strong></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <select class="form-control form-control-lg" formControlName="dias_seguro" placeholder="Dias Asegurado">
+                  <option value="" disabled selected>Seleccione una opción</option>
+                  <option value="3">3 Dias</option>
+                  <option value="7">7 Dias</option>
+                </select>
+                <div class="text-danger"
+                  *ngIf="userForm.get('dias_seguro')?.hasError('required') && userForm.get('dias_seguro')?.touched">
+                  <span>Los dias de seguro <strong>son obligatorios</strong></span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-secondary btn-lg float-start" routerLink="/lista-asegurados">VOLVER</button>
+                <button class="btn btn-success btn-lg float-end" type="submit" [disabled]="userForm.invalid">ACEPTAR</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

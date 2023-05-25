@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="logo">
+        <img class="image" src="../../assets/images/logo-voyconvos-transparente.png" alt="imagen"><br>
+        <h1>LOGIN</h1>
+    </div>
+    <form class="form" [formGroup]="usuarioForm">
+        <div class="inputs">
+            <span class="input-wrapper">
+                <input id="float-input" type="text" [(ngModel)]="userName" formControlName="userName" placeholder="Ingrese Usuario"> 
+            </span>
+        </div>
+       <div class="inputs">
+        <span class="input-wrapper">
+            <input id="float-input" type="password" [(ngModel)]="password" formControlName="password" placeholder="Ingrese Contraseña"> 
+        </span>
+       </div>
+       <div class="mb-3">
+        <button type="button"  class="button" (click)="login()">Iniciar sesión</button>
+        <button class="button" routerLink="/">Regresar</button>
+        </div>
+        
+    </form>
+    
+
+    
+</div>

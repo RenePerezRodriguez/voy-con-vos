@@ -1,0 +1,96 @@
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(112, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 5em;
+  margin-bottom: 0.5em;
+}
+
+.overlay p {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  font-size: 8px;
+}
+
+.img-logo-home {
+  width: 10em;
+  height: 10em;
+  margin-right: 1em;
+}
+
+.benefits-container {
+  width: 1000px; /* Ajusta el ancho máximo del contenedor de beneficios según tus necesidades */
+  margin: 0 auto; /* Centra el contenedor de beneficios horizontalmente */
+  padding: 20px; /* Añade espacio de relleno para mayor legibilidad */
+}
+
+.benefits-container h2 {
+  font-size: 24px; /* Ajusta el tamaño de fuente de los títulos de beneficios según tus necesidades */
+  margin-top: 30px; /* Añade espacio superior para separar los títulos de beneficios */
+}
+
+.benefits-container p {
+  font-size: 16px; /* Ajusta el tamaño de fuente del contenido de beneficios según tus necesidades */
+  margin-top: 10px; /* Añade espacio superior para separar el contenido de beneficios */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .video-container {
+    height: 1500px; /* Ajusta la altura del contenedor de video para dispositivos móviles */
+  }
+  
+  .overlay h1 {
+    font-size: 3em; /* Ajusta el tamaño de fuente del título del overlay para dispositivos móviles */
+  }
+  
+  .overlay p {
+    font-size: 1em; /* Ajusta el tamaño de fuente del contenido del overlay para dispositivos móviles */
+  }
+  
+  .img-logo-home {
+    width: 7em; /* Ajusta el tamaño del logo para dispositivos móviles */
+    height: 7em;
+  }
+  
+  .benefits-container {
+    width: 100%; /* Ajusta el ancho del contenedor de beneficios para dispositivos móviles */
+    padding: 10px; /* Ajusta el espacio de relleno del contenedor de beneficios para dispositivos móviles */
+  }
+  
+  .benefits-container h2 {
+    font-size: 18px; /* Ajusta el tamaño de fuente de los títulos de beneficios para dispositivos móviles */
+  }
+}

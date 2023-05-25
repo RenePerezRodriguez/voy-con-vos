@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="row" class="text-center align-middle">
+    <div class="col-12 col-lg-10 offset-lg-1">
+      <div class="card">
+        <div class="card-header text-center">
+          <span class="titulo">LISTA DE ASEGURADOS</span>
+          <button class="btn btn-success float-lg-end" routerLink="/create-user">Nuevo Asegurado</button>
+        </div>
+        <div class="card-body">
+          <div class="form-group mt-3">
+            <input [(ngModel)]="searchTerm" (keyup)="searchUser()" type="text" class="form-control mb-3"
+              placeholder="Buscar por nombre, apellido o CI">
+          </div>
+          <div class="table-responsive">
+            <table *ngIf="listUsers.length > 0" class="table table-dark table-striped table-bordered mt-3">
+              <thead>
+                <tr class="text-center align-middle">
+                  <th scope="col">C.I.</th>
+                  <th scope="col">Nombres</th>
+                  <th scope="col">Apellidos</th>
+                  <th scope="col">Fecha de Nacimiento</th>
+                  <th scope="col">Sexo</th>
+                  <th scope="col">Celular</th>
+                  <th scope="col">Ciudad de Destino</th>
+                  <th scope="col">Dias Asegurado</th>
+                  <th scope="col">Fecha de Activación</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center align-middle" *ngFor="let user of listUsers | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: listUsers.length }">
+                  <td>{{ user.ci }}</td>
+                  <td>{{ user.nombres }}</td>
+                  <td>{{ user.apellidos }}</td>
+                  <td>{{ user.fecha_nacimiento }}</td>
+                  <td>{{ user.sexo }}</td>
+                  <td>{{ user.telefono }}</td>
+                  <td>{{ user.ciudad_destino }}</td>
+                  <td>{{ user.dias_seguro }}</td>
+                  <td>{{ user.fecha_activacion|date:"dd-MM-Y" }}</td>
+                  <td>
+                    <i [routerLink]="['/edit-user', user.id]" class="fa-solid fa-pen-to-square text-primary"></i>
+                    <i (click)="deleteUser(user.ci)" class="fa-solid fa-trash text-danger"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="currentPage = $event" previousLabel="Anterior" nextLabel="Siguiente"
+              class="my-pagination"></pagination-controls>
+            <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsers.length == 0">No hay asegurados para
+              mostrar</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

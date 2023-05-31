@@ -46,7 +46,12 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      //positionClass: 'toast-bottom-left',
+      preventDuplicates: true,
+      progressAnimation: 'increasing'
+    }),
     HttpClientModule,
     FormsModule,
     NgxPaginationModule,

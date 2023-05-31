@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -49,17 +50,26 @@ export class LoginComponent implements OnInit {
         console.log(token);
         this.router.navigate(['/lista-asegurados']);
         localStorage.setItem('token', token)
-        
+      },
+      error: (e: HttpErrorResponse) => {
+        this.msgError(e);
       }
     })
   }
-  getUsers() {
+  msgError(e : HttpErrorResponse) {
+    if (e.error.msg) {
+      this.toastr.error(e.error.msg, 'Error');
+    }else{
+      this.toastr.error('Ocurrio un error, comuniquese con el adminsitrador', 'Error');
+    }
+  }
+  /*getUsers() {
     this._userService.getUsers().subscribe(data => {
       console.log(data);
       this.listUsers = data;
     }, error => {
       console.log(error);
     })
-  }
+  }*/
 
 }

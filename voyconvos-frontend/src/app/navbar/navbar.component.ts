@@ -3,6 +3,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class NavbarComponent implements OnInit {
 
   modalRef!: BsModalRef; // Asignación de tipo "!" para indicar que se inicializará en el constructor
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,
+              private router: Router) {}
 
   openModal(template: any) {
     this.modalRef = this.modalService.show(template);
@@ -35,5 +37,10 @@ export class NavbarComponent implements OnInit {
 
   closeModal() {
     this.modalRef.hide();
+  }
+  //salir y borrar token
+  logOut() {
+    localStorage.removeItem('token');
+    this.router.navigate(['']);
   }
 }

@@ -9,7 +9,7 @@ import { Usuario } from '../interfaces/user';
 })
 export class UserService {
   
-  url = 'http://localhost:4000/api/users/';
+  url = 'http://voyconvos.com.bo/api/users/';
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {

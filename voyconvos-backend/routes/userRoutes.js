@@ -7,7 +7,7 @@ const router = Router();
 router.get("/", validateToken, userController.getUsers);
 //router.get("/:ci", userController.getUserCI);
 router.post("/", validateToken, userController.addUser);
-router.post("/encriptado", validateToken, userController.addUserEncrypt);
+router.post("/encriptado", userController.addUserEncrypt);
 router.delete("/:ci",  userController.deleteUser);
 //router.put("/:ci", userController.updateUser);
 

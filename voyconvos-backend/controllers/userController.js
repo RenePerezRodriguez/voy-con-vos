@@ -229,7 +229,7 @@ const loginUser = async(req, res) => {
         const validarUsuario = await connection.query("SELECT * FROM usuarios WHERE userName = ?", userName);
     
         if (validarUsuario.length === 0) {
-          res.status(400).json({ msg: `No existe un usuario con el nombre ${userName} en la base de datos` });
+          res.status(400).json({ msg: `No existe un usuario: ${userName} en la base de datos` });
         } 
         else 
         {

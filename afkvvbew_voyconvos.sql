@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 25-05-2023 a las 15:25:39
+-- Tiempo de generación: 22-07-2023 a las 04:39:42
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -146,21 +146,16 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombres`, `apellidos`, `rol`, `fecha_nacimiento`, `userName`, `telefono`, `sexo`, `ci`, `password`, `dias_seguro`, `ciudad_destino`, `codigo_generado`, `codigo`, `condiciones`, `fecha_activacion`, `estado`) VALUES
-(6, 'Marco', 'Montaño', 'Viajero', '20/12/2000', NULL, '4562133', 'M', '855201553', NULL, 3, 'La Paz', 'VYV000002', NULL, 0, '2023-04-09 21:02:46', 0),
-(24, 'Maria', 'Montes', 'Viajero', '20/12/1999', NULL, '45621', 'F', '855202', NULL, NULL, 'Beni', 'VYV-0007', NULL, 0, '2023-04-20 19:48:04', 1),
 (31, 'cristian', 'castro', NULL, '2023-03-27', NULL, '23245', 'M', '123', NULL, NULL, 'La paz', 'VYV-0011', NULL, 0, '2023-04-24 22:03:30', 1),
-(59, 'Nick Cabrera', 'Cabrera ', 'Viajero', '2023-05-02', NULL, 'ASD', 'ASD', '23423', NULL, 2, 'ASD', 'VYV-0015', NULL, 0, '2023-05-18 02:06:46', 0),
-(66, 'Pedro Pepe Pepillo', 'Perez Peralez', 'Viajero', '2023-05-16', NULL, '5999494', 'M', '2323aa', NULL, 3, 'Cochabamba', 'VYV-0016', NULL, 0, '2023-05-18 03:44:04', 0),
-(75, 'Pedro', 'Picapiedra', 'Viajero', '2023-05-19', NULL, '234674a', 'M', '3553asdas', NULL, 3, 'Potosí', 'VYV-0023', NULL, 0, '2023-05-19 15:51:23', 0),
-(81, 'Asdasd', 'Asdasd', 'Viajero', '2023-05-11', NULL, '234522z', 'M', '42423aa', NULL, 3, 'La Paz', 'VYV-0024', NULL, 0, '2023-05-19 16:45:30', 0),
-(82, 'Asdasd', 'Asdasd', 'Viajero', '2023-05-22', NULL, '234455', 'M', '235235asd', NULL, 7, 'Oruro', 'VYV-0025', NULL, NULL, '2023-05-16 02:40:00', 0),
-(88, 'Nick', 'Cabrera', 'Viajero', '20/12/1999', 'nick', 'asd', 'F', '34223a', '$2a$10$aEn4GOiCmSlLpJww0MoTVe5QVqALH3O5iduZteY7kciVl7u7PBU7e', 3, 'Beni', 'VYV-0027', NULL, NULL, '2023-05-25 04:12:06', 1),
-(100, 'Nick1', 'Cabrera', 'Viajero', '20/12/1999', 'nicka', 'asd', 'F', '34223aa', '$2a$10$mHrXlH28IO6cGyNhtyc09eZaWRQOGs7z6oidQo4OV82xTHoaJlEY6', 3, 'Beni', 'VYV-0028', NULL, NULL, '2023-05-25 05:06:29', 1),
-(107, 'Nick1', 'Cabrera', 'Viajero', '20/12/1999', 'nickaa1', 'asd', 'F', '3422a3a3aa', '$2a$10$.c1HTps5Qu4M7R7tG.pC1.QIsjl1BR3oe6ES93JUrNiSXYWVdnb4.', 3, 'Beni', 'VYV-0029', NULL, NULL, '2023-05-25 13:07:24', 1),
-(108, 'Nick1', 'Cabrera', 'Viajero', '20/12/1999', 'nickaaa1', 'asd', 'F', '3422a3a223aa', '$2a$10$mB2TO/HuOEcvEBVJKiXrFeI271dVcKAz.Dm8jnizFruRmTJTG5vo2', 3, 'Beni', 'VYV-0030', NULL, NULL, '2023-05-25 13:07:41', 1),
-(109, 'Asdas', 'Asdasdas', 'Viajero', '2023-05-16', NULL, '32234', 'O', '113324asda', NULL, 3, 'Pando', 'VYV-0031', NULL, NULL, '2023-05-25 13:13:40', 1),
-(110, 'Zzzzz', 'Zzzzzz', 'Viajero', '2023-05-01', NULL, '1222222', 'O', 'zzzzzzz', NULL, 7, 'Chuquisaca', 'VYV-0032', NULL, NULL, '2023-05-25 13:14:29', 1),
-(111, 'Qweqwe', 'Qweqwe', 'Viajero', '2023-05-24', 'nick2aaa1', '11111111', 'F', '86968', '$2a$04$vnrmi8szJP5Jf9i8SAaAh.5kehzRqt6A5brQIY2ncY4o3LZy6pIFm', 7, 'La Paz', 'VYV-0033', NULL, NULL, '2023-05-25 13:15:31', 1);
+(59, 'Nick Cabrera', 'Cabrera ', 'Viajero', '2023-05-02', NULL, '34456', 'F', '23423', NULL, 2, 'ASD', 'VYV-0015', NULL, 0, '2023-05-18 02:06:46', 0),
+(66, 'Pedro Pepe Pepillo', 'Perez Peralez', 'Viajero', '2023-05-16', NULL, '5999494', 'M', '2323', NULL, 7, 'Cochabamba', 'VYV-0016', NULL, 0, '2023-05-18 03:44:04', 0),
+(75, 'Pedro', 'Picapiedra', 'Viajero', '2023-05-19', NULL, '234674a', 'M', '3553', NULL, 3, 'Potosí', 'VYV-0023', NULL, 0, '2023-05-19 15:51:23', 0),
+(172, 'Marco Mercado', 'Vargas Bargas', 'Admin', '20/12/1999', 'marco1', 'asd', 'M', '4442467', '$2a$10$JCFtyCXdhNN36nuEjhoP6e8u/.DAcnXw/fsrwxpFI1LSxfn5B.LRq', NULL, 'Chuquisaca', 'ADM-001', NULL, NULL, '2023-07-15 16:59:21', 1),
+(173, 'Marco Mercado', 'Vargas Bargas', 'Admin', '20/12/1999', 'marco', 'asd', 'M', '4442467', '$2a$10$j7ZpqWlgKHAZGPkiElV7FeER483WK75SUDxQHn3L5tkhHXiJf/HV6', NULL, 'Chuquisaca', 'ADM-002', NULL, NULL, '2023-07-15 17:06:29', 1),
+(175, 'Milenka', 'Miles', 'Viajero', '2023-06-26', NULL, '4564645651', 'F', '476557', NULL, 3, 'La Paz', 'VYV-0039', NULL, NULL, '2023-07-16 20:02:10', 1),
+(176, 'Juan', 'Juanes', 'Viajero', '2023-02-08', NULL, '422222', 'M', '2342352', NULL, 3, 'Beni', 'VYV-0040', NULL, NULL, '2023-07-18 14:21:01', 1),
+(178, 'Test', '01', 'Admin', '20/12/1999', 'test01', '00000000', 'M', '0000', '$2a$10$q0c1Qh4zcYCriykqpKBTZeVm51RYBuQ867NxPN1yg.mP8.ZCCDLAK', NULL, '', 'ADM-003', NULL, NULL, '2023-07-18 15:55:00', 1),
+(179, 'Martha', 'Morales', 'Viajero', '2009-05-12', NULL, '8555555', 'O', '7855885', NULL, 7, 'La Paz', 'VYV-0041', NULL, NULL, '2023-07-21 18:45:02', 1);
 
 --
 -- Disparadores `usuarios`
@@ -298,7 +293,7 @@ ALTER TABLE `tiene`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
 -- Restricciones para tablas volcadas

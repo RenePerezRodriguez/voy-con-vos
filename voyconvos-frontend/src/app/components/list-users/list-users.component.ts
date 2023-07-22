@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
@@ -21,7 +22,8 @@ export class ListUsersComponent implements OnInit{
     //this.dataSource.paginator = this.paginator;
   //}
   constructor(private _userService: UserService,
-              private toastr: ToastrService){  }
+              private toastr: ToastrService,
+              private router: Router){  }
 
   ngOnInit(): void {
     this.getUsers();
@@ -55,5 +57,9 @@ export class ListUsersComponent implements OnInit{
     }, error => {
       console.log(error);
     })
+  }
+  logOut() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login'])
   }
 }

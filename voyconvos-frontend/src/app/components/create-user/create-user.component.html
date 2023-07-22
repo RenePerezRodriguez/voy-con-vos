@@ -1,4 +1,5 @@
-<div class="container mt-5">
+<body class="body-create">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="card">
@@ -69,7 +70,7 @@
               </div>
               <div class="mb-3">
                 <select class="form-control form-control-lg" formControlName="ciudad_destino" placeholder="Ciudad Destino">
-                  <option value="" disabled selected>Seleccione su Ciudad de Destino</option>
+                  <option value="" disabled selected>Seleccione la Ciudad de Destino</option>
                   <option value="La Paz">La Paz</option>
                   <option value="Oruro">Oruro</option>
                   <option value="Potosí">Potosí</option>
@@ -87,7 +88,7 @@
               </div>
               <div class="mb-3">
                 <select class="form-control form-control-lg" formControlName="dias_seguro" placeholder="Dias Asegurado">
-                  <option value="" disabled selected>Seleccione una opción</option>
+                  <option value="" disabled selected>Seleccione los Días del Seguro</option>
                   <option value="3">3 Dias</option>
                   <option value="7">7 Dias</option>
                 </select>
@@ -97,7 +98,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <button class="btn btn-secondary btn-lg float-start" routerLink="/lista-asegurados">VOLVER</button>
+                <button class="btn btn-secondary btn-lg float-start" routerLink="/list-users">VOLVER</button>
                 <button class="btn btn-success btn-lg float-end" type="submit" [disabled]="userForm.invalid">ACEPTAR</button>
               </div>
             </form>
@@ -107,3 +108,4 @@
     </div>
   </div>
   
+</body>

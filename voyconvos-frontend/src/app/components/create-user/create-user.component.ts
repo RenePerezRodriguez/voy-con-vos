@@ -87,7 +87,7 @@ export class CreateUserComponent implements OnInit {
       //Editamos usuario
       this._userService.updateUserID(this.id, USER).subscribe(data =>{
         this.toastr.info('El asegurado fue actualizado con exito!', 'Asegurado Actualizado!');
-        this.router.navigate(['/lista-asegurados']);
+        this.router.navigate(['/list-users']);
       }, error =>{
         console.log(error);
         
@@ -97,7 +97,7 @@ export class CreateUserComponent implements OnInit {
       //agregamos usuario
       this._userService.addUser(USER).subscribe(data => {
         this.toastr.success('El asegurado fue registrado con exito!', 'Asegurado Registrado!');
-        this.router.navigate(['/lista-asegurados']);
+        this.router.navigate(['/list-users']);
       }, error =>{
         console.log(error);;
         this.toastr.warning('El usuario con el mismo CI no puede ser registrado');
@@ -127,5 +127,4 @@ export class CreateUserComponent implements OnInit {
       })
     }
   }
-  
 }

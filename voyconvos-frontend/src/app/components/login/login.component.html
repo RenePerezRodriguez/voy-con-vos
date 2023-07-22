@@ -1,26 +1,58 @@
-<div class="container">
-    <div class="logo">
-        <img class="image" src="../../assets/images/logo-voyconvos-transparente.png" alt="imagen"><br>
-        <h1>LOGIN</h1>
+<body>
+  <section class="text-center">
+    
+  
+  <div class="card mx-auto mt-5 shadow-5-strong">
+    <img class="p-5 bg-image" src="assets/images/logo-voyconvos-transparente.png" alt="logo">
+    <div class="card-body py-4 px-md-4">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+          <h2 class="fw-bold mb-4 text-center">Login</h2>
+          <form [formGroup]="usuarioForm">
+            <div class="form-outline mb-3">
+              <input type="text" class="form-control" placeholder="Ingrese su usuario" [(ngModel)]="userName"
+                formControlName="userName" />
+            </div>
+  
+            <div class="form-outline mb-3">
+              <input type="password" class="form-control" placeholder="Ingrese su contraseña" [(ngModel)]="password"
+                formControlName="password" />
+            </div>
+  
+            <!--<div class="form-check d-flex justify-content-center mb-4">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+              <label class="form-check-label" for="form2Example33">
+                Subscribe to our newsletter
+              </label>
+            </div>-->
+  
+            <button type="submit" class="btn btn-primary btn-block mb-3" (click)="login()">Aceptar</button>
+  
+            <!--<div class="text-center">
+              <p>or sign up with:</p>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+  
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+  
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+  
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+              </button>
+            </div>-->
+          </form>
+        </div>
+      </div>
     </div>
-    <form class="form" [formGroup]="usuarioForm">
-        <div class="inputs">
-            <span class="input-wrapper">
-                <input id="float-input" type="text" [(ngModel)]="userName" formControlName="userName" placeholder="Ingrese Usuario"> 
-            </span>
-        </div>
-       <div class="inputs">
-        <span class="input-wrapper">
-            <input id="float-input" type="password" [(ngModel)]="password" formControlName="password" placeholder="Ingrese Contraseña"> 
-        </span>
-       </div>
-       <div class="mb-3">
-        <button type="button"  class="button" (click)="login()">Iniciar sesión</button>
-        <button class="button" routerLink="/">Regresar</button>
-        </div>
-        
-    </form>
-    
+  </div>
+  
+  </section>
 
-    
-</div>
+  <!-- Agrega aquí tus scripts y referencias a otros archivos JS si los necesitas -->
+</body>

@@ -1,49 +1,102 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.logo {
-    margin-bottom: 1rem;
-}
-.logo img{
-    height: 100px;
-
-}
-
-.form {
-    width: 100%;
-}
-
-.inputs {
-    margin-top: 0.5rem;
-}
-
-.input-wrapper {
+.p-5 {
+    padding: 1.25rem !important;
+  }
+  
+  .bg-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    //height: 600px;
+  }
+  
+  .card {
+    margin-top: -100px;
+    //background: hsla(0, 16%, 35%, 0.8);
+    //background: hsla(0, 31%, 54%, 0.8);
+    background: #e7a9a9;
+    backdrop-filter: blur(30px);
+    max-width: 350px;
+  }
+  
+  .card-body {
+    padding: 1.25rem !important;
+  }
+  
+  .form-outline {
     position: relative;
-}
-
-.input-wrapper input {
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-bottom: 1px solid #ccc;
-}
-
-.button {
-    margin-top: 1rem;
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
+  }
+  
+  .form-control {
+    padding: 0.5rem 1rem;
+  }
+  
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    padding: 0 0.25rem;
+    background-color: #fff;
+  }
+  
+  .btn-primary {
     background-color: #007bff;
     color: #fff;
-    cursor: pointer;
-}
-
-.mt-5 {
-    margin-top: 5rem;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  .btn-floating {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .btn-floating i {
+    color: #fff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .mb-4:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .justify-content-center {
+    justify-content: center !important;
+  }
+  
+  .d-flex {
+    display: flex !important;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-lg-8 {
+    flex: 0 0 66.66667% !important;
+    max-width: 66.66667% !important;
+  }
+  .toast-middle-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

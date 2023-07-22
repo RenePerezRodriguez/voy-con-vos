@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 //import para la integracion Frontend- Backend
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -25,6 +25,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddTokenInterceptor } from './utils/add-token.interceptor';
 
 
 
@@ -48,15 +49,17 @@ import { LoginComponent } from './components/login/login.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 3000,
-      //positionClass: 'toast-bottom-left',
+      positionClass: 'toast-middle-center',
       preventDuplicates: true,
-      progressAnimation: 'increasing'
+      progressAnimation: 'increasing',
     }),
     HttpClientModule,
     FormsModule,
     NgxPaginationModule,
     ],
-  providers: [BsModalService],
+  providers: [BsModalService,
+    { provide: HTTP_INTERCEPTORS, useClass: AddTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

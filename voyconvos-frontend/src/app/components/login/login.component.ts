@@ -1,12 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { data } from 'jquery';
 import { ToastrService } from 'ngx-toastr';
-import { Usuario } from 'src/app/interfaces/user';
+import { Login } from 'src/app/interfaces/login'; 
 import { User } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
+import { AdminService } from 'src/app/services/admin.service';
+import { ErrorService } from 'src/app/services/error.service';
 
 
 
@@ -22,8 +22,9 @@ export class LoginComponent implements OnInit {
   listUsers: User[] = [];
 
   constructor(private toastr: ToastrService,
-              private _userService: UserService,
-              private router: Router) 
+              private _adminService: AdminService,
+              private router: Router,
+              private _errorService: ErrorService) 
   { 
     this.usuarioForm = new FormGroup({
       'userName': new FormControl(this.userName, Validators.required),
@@ -37,32 +38,26 @@ export class LoginComponent implements OnInit {
     //validar que usuario ingrese datos
     if (this.userName== '' || this.password == '') 
     {
-      this.toastr.error('Todos los campos son obligatorios', 'Error');
+      this.toastr.warning('Todos los campos son obligatorios', 'Error');
       return
     }
     //Creamos el body
-    const usuario: Usuario = {
+    const usuario: Login = {
       userName: this.userName,
       password: this.password
     }
-    this._userService.login(usuario).subscribe({
+    this._adminService.login(usuario).subscribe({
       next: (token) => {
-        console.log(token);
-        this.router.navigate(['/lista-asegurados']);
+        //console.log(token);
         localStorage.setItem('token', token)
+        this.router.navigate(['/list-users']); 
       },
       error: (e: HttpErrorResponse) => {
-        this.msgError(e);
+        this._errorService.msgError(e);
       }
     })
   }
-  msgError(e : HttpErrorResponse) {
-    if (e.error.msg) {
-      this.toastr.error(e.error.msg, 'Error');
-    }else{
-      this.toastr.error('Ocurrio un error, comuniquese con el adminsitrador', 'Error');
-    }
-  }
+ 
   /*getUsers() {
     this._userService.getUsers().subscribe(data => {
       console.log(data);
@@ -71,5 +66,4 @@ export class LoginComponent implements OnInit {
       console.log(error);
     })
   }*/
-
 }
